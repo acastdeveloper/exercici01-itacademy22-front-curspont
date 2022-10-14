@@ -1,0 +1,126 @@
+:root {
+    --color0:#dadada;
+    --color1:#333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1rem;
+}
+
+body {
+    background: var(--color0);
+    color: var(--color1);
+}
+
+/* COLORAINES PER L'EXERCICI */
+#wrapp > header, footer {
+    background: #000;
+}
+
+#wrapp > section {
+    background: #ee3;
+}
+
+#topheader {
+    background: #334;
+}
+
+#topheader>* {
+    background: #ff6666;
+}
+
+#bottomheader {
+    background: #ff6633;
+}
+
+#banner {
+    background: #eeee33;
+}
+
+main {
+    background: #334;
+}
+
+main > article {
+    background: #369;
+}
+
+main > article:last-child {
+    background: #69c;
+}
+
+aside {
+    background: #cc0033;
+}
+
+aside > section {
+    background: #ffff99;
+}
+
+footer > section {
+    background: #eecc00;
+}
+
+/* FI DE LES COLORAINES */
+
+/* ESTRUCTURA */
+
+/* CSS-GRID */
+
+/* EXERCICI 3 */
+#wrapp {
+    display: grid;
+    gap: 1rem;
+}
+
+#wrapp > * {
+    display: grid;
+    gap:1rem;
+}
+
+
+#topheader {
+    display: grid;
+    gap:1rem;
+}
+
+main {
+    display:grid;
+    gap:1rem;
+}
+
+aside {
+    display: grid;
+    gap:1rem;
+}
+
+/* EXERCICI 2 */
+@media screen and (min-width: 480px) {
+
+    #topheader {
+        grid-template-columns: 15% auto 15%;
+    }
+
+    main {
+        grid-template-columns: 49% 49%;
+        column-gap:1%;
+        justify-content: space-between;
+    }
+
+    main article:last-child {
+        grid-column-start:1;
+        grid-column-end:3
+    }
+
+}
+
+/* EXERCICI 1 */
+@media screen and (min-width: 960px) {
+    #wrapp {max-width: 1200px; margin:auto;}
+
+    #wrapp>section {
+        grid-template-columns: 77% auto;
+    }
+}
